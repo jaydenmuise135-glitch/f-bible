@@ -1,2 +1,1 @@
-# basickjvbible
-Terminal style bible app
+release soon!
