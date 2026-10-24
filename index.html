@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-palette="amber" data-cursor="on">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d0c0a" />
+    <meta
+      name="description"
+      content="basickjvbible — a terminal-styled reader for the complete King James Bible. All 66 books, 31,102 verses, offline and distraction free."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Fira+Code:wght@400;500&family=Courier+Prime:wght@400;700&family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d0c0a'/%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='none' stroke='%23ff8a3d' stroke-width='1.5'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='12' font-weight='700' fill='%23ff8a3d' text-anchor='middle'%3E%26gt;_%3C/text%3E%3C/svg%3E"
+    />
+    <title>basickjvbible</title>
+    <script>
+      try {
+        var saved = JSON.parse(localStorage.getItem("basickjvbible:settings:v1") || "{}");
+        if (saved && saved.palette) document.documentElement.dataset.palette = saved.palette;
+        document.documentElement.dataset.cursor = saved && saved.cursor === false ? "off" : "on";
+      } catch (error) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
